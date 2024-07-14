@@ -1,0 +1,29 @@
+{
+    "games": [
+        {
+            "title": "Fall Survivor",
+            "url": "https://parado10.itch.io/fall-survival",
+            "image": "https://img.itch.zone/aW1hZ2UvMjUxOTUxMy8xNTIzNDkwNy5wbmc=/original/Rhetpv.png"
+        },
+        {
+            "title": "Jija Escape",
+            "url": "https://parado10.itch.io/jija-escape",
+            "image": "images/Jija_escape.png"
+        },
+        {
+            "title": "Sould Binary Abyss",
+            "url": "https://parado10.itch.io/sbinaryabyss",
+            "image": "https://img.itch.zone/aW1hZ2UvMjIzMjQwOC8xMzI0NTY2My5wbmc=/original/eQDMZo.png"
+        },
+        {
+            "title": "DAFFY",
+            "url": "https://5weetdev.itch.io/daffy",
+            "image": "images/daffy.png"
+        },
+        {
+            "title": "Space Artifacts Liberation Odyssey",
+            "url": "https://5weetdev.itch.io/salo",
+            "image": "https://img.itch.zone/aW1nLzEyOTAwMjQ1LnBuZw==/original/VPEkEJ.png"
+        }
+    ]
+}
