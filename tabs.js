@@ -8,17 +8,30 @@ function animateItems(tabId) {
 document.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
-        document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
-        document.querySelectorAll('nav a').forEach(navLink => navLink.classList.remove('active'));
-        const targetTab = document.querySelector(this.getAttribute('href'));
-        targetTab.classList.add('active');
-        this.classList.add('active');
-
-        if (targetTab.id === 'games' || targetTab.id === 'other') {
-            animateItems(`#${targetTab.id}`);
-        }
+        switchTab(this.getAttribute('href'));
     });
 });
+
+document.querySelector('.logo-name').addEventListener('click', function() {
+    switchTab('#home');
+});
+
+function switchTab(tabId) {
+    document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+    document.querySelectorAll('nav a').forEach(navLink => navLink.classList.remove('active'));
+    
+    const targetTab = document.querySelector(tabId);
+    targetTab.classList.add('active');
+    
+    // Highlight the appropriate navigation link
+    document.querySelector(`nav a[href="${tabId}"]`).classList.add('active');
+
+    // Add animations if switching to games or other tabs
+    if (tabId === '#games' || tabId === '#other') {
+        animateItems(tabId);
+    }
+}
+
 
 /*
 document.addEventListener('DOMContentLoaded', () => {

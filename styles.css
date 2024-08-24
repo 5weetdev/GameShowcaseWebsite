@@ -41,6 +41,7 @@ header {
     font-weight: bold;
     font-style: italic;
     color: #bb86fc;
+    cursor: pointer;
     text-decoration: #ffffff73 underline;
 }
 
