@@ -1,9 +1,13 @@
+a {
+    color:#bb86fc;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #121212;
-    color: #ffffff;
+    color: #d6d6d6;
 }
 
 header {
@@ -86,6 +90,7 @@ main {
     display: flex;
     gap: 20px;
     flex-wrap: nowrap;
+    justify-content: space-between;
 }
 
 .game-list .game-item:nth-child(even){
@@ -103,12 +108,20 @@ main {
 
 .game-list .big-screenshot{
     max-width: 98%;
-    margin: 1%;
+    margin: 1% 1% 0% 1%;
+    border-radius: 5px;
+}
+
+.small-screenshot{
+    @extend .game-screenshot;
+    max-width: 28%;
+    margin: 5px;
     border-radius: 5px;
 }
 
 .game-info{
     min-width: 100px;
+    flex-grow: 1;
 }
 
 .game-info .game-visual {
@@ -120,13 +133,17 @@ main {
     display: flex;
 }
 
+h1, h2, h3, h4, h5{
+    color: #bb86fc;
+}
+
 .game-title {
     color: #bb86fc;
     margin-bottom: 10px;
 }
 
 .game-description {
-    color: #ffffff;
+    color: #9e73d3;
 }
 
 .game-screenshot {
