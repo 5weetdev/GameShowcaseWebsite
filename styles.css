@@ -18,6 +18,11 @@ header {
     align-items: center;
 }
 
+iframe {
+    margin: 0 auto;
+    display:block; 
+}
+
 .logo {
     display: flex;
     align-items: center;
