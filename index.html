@@ -59,8 +59,8 @@
 
             <section id="featured-projects"><h2 class="section-title" id="featured-title"></h2><p class="nda-tip" id="featured-nda"></p><div class="featured-project-list" id="featured-list"></div></section>
             <section id="hypercasual-games"><h2 class="section-title" id="hypercasual-title"></h2><p id="hypercasual-description" class="section-description"></p><div class="project-grid-hypercasual" id="hypercasual-grid"></div></section>
-            <section id="game-jams"><h2 class="section-title" id="gamejams-title"></h2><div class="gamejam-list" id="gamejams-list"></div></section>
             <section id="videos-prototypes"><h2 class="section-title" id="videos-title"></h2><div class="video-grid" id="videos-grid"></div></section>
+            <section id="game-jams"><h2 class="section-title" id="gamejams-title"></h2><div class="gamejam-list" id="gamejams-list"></div></section>
         </main>
 
         <footer><p>&copy; 2024 Oleksii Voloshchuk. All rights reserved.</p></footer>
@@ -199,8 +199,14 @@
                 const hypercasualGrid = document.getElementById('hypercasual-grid');
                 hypercasualGrid.innerHTML = ''; // Clear existing
                 hypercasual.projects.forEach(p => {
+                    let mediaHTML = '';
+                    if (p.youtubeEmbedUrl) {
+                        mediaHTML = `<iframe src="${p.youtubeEmbedUrl}" title="${p.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+                    } else if (p.image) {
+                        mediaHTML = `<img src="${p.image}" alt="${p.title}" class="enlargeable">`;
+                    }
                     const cardContent = `
-                        <img src="${p.image}" alt="${p.title}" class="enlargeable">
+                        ${mediaHTML}
                         <h4>${p.title}</h4>
                     `;
                     if (p.url) {

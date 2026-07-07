@@ -40,14 +40,16 @@
       "title": "Hypercasual Games",
       "description": "A selection of hypercasual games developed for various clients and publishers. This work involved rapid prototyping, designing engaging core loops, and preparing projects for market testing and publishing.",
       "projects": [
-        { "title": "Coin Tangle", "image": "images/casual/coin-tangle.png" },
-        { "title": "Sticker Dom", "image": "images/casual/sticker-dom.png" },
-        { "title": "Billiard Jam ", "image": "images/casual/billiard-jam.png" },
-        { "title": "Drop Jam", "image": "images/casual/drop-jam.png" },
-        { "title": "Fridge Fenzy", "image": "images/casual/fridge-frenzy.png"},
-        { "title": "Luggage Drop", "image": "images/casual/luggage-drop.png" },
-        { "title": "Pickup Jam", "image": "images/casual/pickup-jam.png" },
-        { "title": "Pipes", "image": "images/casual/pipes.png"}
+        { "title": "Color Block Sort!", "youtubeEmbedUrl": "https://www.youtube.com/embed/3k7EMXbZmhk" },
+        { "title": "Fridge Frenzy!", "youtubeEmbedUrl": "https://www.youtube.com/embed/_kYKeMq4WfU" },
+        { "title": "Gift Jam!", "youtubeEmbedUrl": "https://www.youtube.com/embed/g3TN4XW7a7g" },
+        { "title": "Jigsort!", "youtubeEmbedUrl": "https://www.youtube.com/embed/hFuZzdKRGU0" },
+        { "title": "Juicy Drop!", "youtubeEmbedUrl": "https://www.youtube.com/embed/6A5518LlQgU" },
+        { "title": "Luggage Jam!", "youtubeEmbedUrl": "https://www.youtube.com/embed/eL6bf3cU7qY" },
+        { "title": "Market Maze!", "youtubeEmbedUrl": "https://www.youtube.com/embed/KHikE-w0nRk" },
+        { "title": "Money Merge Jam!", "youtubeEmbedUrl": "https://www.youtube.com/embed/ajFDGYmToBY" },
+        { "title": "Block Mania!", "youtubeEmbedUrl": "https://www.youtube.com/embed/OvD_67odAxg" },
+        { "title": "Van Jam!", "youtubeEmbedUrl": "https://www.youtube.com/embed/3QT_9sjqIAI" }
       ]
     },
     "gameJams": {
@@ -64,8 +66,11 @@
       "projects": [
         { "title": "Wave function collapse", "youtubeEmbedUrl": "https://www.youtube.com/embed/LWiweMjR5iQ?si=3VKqghuX2I7EPXrn", "description": "My implementation of the popular algorithm for generating simple landscapes from a given tilemap." },
         { "title": "Post office game prototype", "youtubeEmbedUrl": "https://www.youtube.com/embed/BYnIivyabC8?si=IQYBQaFVD-YFLzT5", "description": "Developed a prototype of a post office simulator in one week with a 3D artist." },
+        { "title": "Zombie Friend Game [WIP]", "youtubeEmbedUrl": "https://www.youtube.com/embed/m5vikFvVu1Q?si=RamIxurHC5SgbzB0", "description": "Multiplayer game in development." },
         { "title": "RoboBobo Multiplayer", "youtubeEmbedUrl": "https://www.youtube.com/embed/LFEx8xezikE?si=GTpujwUV4NfVDziy", "description": "A multiplayer version of the GMTK 2024 game, using Netcode for GameObjects and Unity Relay services." },
-        { "title": "Meals and monsters", "youtubeEmbedUrl": "https://www.youtube.com/embed/-3Gq0btQik4?si=Q4CijBHX0ABbb0mN", "description": "Yet another gamejam project with gesture recongnition." }
+        { "title": "Meals and monsters", "youtubeEmbedUrl": "https://www.youtube.com/embed/-3Gq0btQik4?si=Q4CijBHX0ABbb0mN", "description": "Yet another gamejam project with gesture recongnition." },
+        { "title": "Souls Binary Abyss", "youtubeEmbedUrl": "https://www.youtube.com/embed/5Nt-Hn-MjXQ?si=unGY4xg7Tj4D4zC6", "description": "Based on the divine comedy." },
+        { "title": "Jija Escape", "youtubeEmbedUrl": "https://www.youtube.com/embed/aGbRkG3LLM8?si=EIunVwUe2E4pKNyN", "description": "You are an ordinary office fish that came to work. And suddenly on the very first day in the office, something terrible happens, and now you have to save your life by building upwards the Tower of Trash that gets in your way and avoiding the Muddy Slime Monster." }
       ]
     }
   }

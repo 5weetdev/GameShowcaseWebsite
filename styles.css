@@ -289,6 +289,7 @@ h3 a:hover, h4 a:hover {
 }
 .hypercasual-card:hover { transform: translateY(-5px); }
 .hypercasual-card img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+.hypercasual-card iframe { width: 100%; aspect-ratio: 9 / 16; border: none; display: block; }
 .hypercasual-card h4 { padding: 1rem; margin: 0; background-color: rgba(0,0,0,0.3); color: var(--text-color); font-weight: 500; }
 
 a.hypercasual-card { display: block; text-decoration: none; }
