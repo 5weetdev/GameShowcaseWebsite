@@ -135,156 +135,107 @@
                 // --- Populate Showcase Project ---
                 const showcase = data.sections.showcaseProject;
                 if (showcase) {
-                    document.getElementById('showcaseTitle').textContent = showcase.title || '';
-                    document.getElementById('showcaseDescription').textContent = showcase.description || '';
-                    
+                    document.getElementById('showcaseTitle').textContent = showcase.title;
+                    document.getElementById('showcaseDescription').textContent = showcase.description;
                     const storeLinksContainer = document.getElementById('showcaseStoreLinks');
                     storeLinksContainer.innerHTML = ''; // Clear existing
-                    if (showcase.storeLinks && showcase.storeLinks.length > 0) {
-                        storeLinksContainer.style.display = 'flex';
-                        showcase.storeLinks.forEach(link => {
-                            storeLinksContainer.innerHTML += `
-                                <a href="${link.url}" target="_blank" class="store-link">
-                                    <img src="${link.iconUrl}" alt="${link.platform} logo">
-                                    <span>${link.platform}</span>
-                                </a>`;
-                        });
-                    } else {
-                        storeLinksContainer.style.display = 'none';
-                    }
-
+                    showcase.storeLinks.forEach(link => {
+                        storeLinksContainer.innerHTML += `
+                            <a href="${link.url}" target="_blank" class="store-link">
+                                <img src="${link.iconUrl}" alt="${link.platform} logo">
+                                <span>${link.platform}</span>
+                            </a>`;
+                    });
                     const screenshotsContainer = document.getElementById('showcaseScreenshots');
                     screenshotsContainer.innerHTML = ''; // Clear existing
-                    if (showcase.screenshots && showcase.screenshots.length > 0) {
-                        screenshotsContainer.style.display = 'grid';
-                        showcase.screenshots.forEach(src => {
-                            screenshotsContainer.innerHTML += `
-                                <div class="screenshot-item">
-                                    <img src="${src}" alt="Screenshot of ${showcase.title}" class="enlargeable">
-                                </div>`;
-                        });
-                    } else {
-                        screenshotsContainer.style.display = 'none';
-                    }
-
+                    showcase.screenshots.forEach(src => {
+                        screenshotsContainer.innerHTML += `
+                            <div class="screenshot-item">
+                                <img src="${src}" alt="Screenshot of ${showcase.title}" class="enlargeable">
+                            </div>`;
+                    });
                     const achievementsContainer = document.getElementById('showcaseAchievements');
                     achievementsContainer.innerHTML = ''; // Clear existing
-                    if (showcase.achievements && showcase.achievements.length > 0) {
-                        achievementsContainer.style.display = 'grid';
-                        showcase.achievements.forEach(ach => {
-                            achievementsContainer.innerHTML += `
-                                <div class="achievement-card">
-                                    <img src="${ach.iconUrl}" class="achievement-icon" alt="">
-                                    <div class="achievement-text">
-                                        <span class="achievement-title">${ach.title}</span>
-                                        <span class="achievement-description">${ach.description}</span>
-                                    </div>
-                                </div>`;
-                        });
-                    } else {
-                        achievementsContainer.style.display = 'none';
-                    }
-
-                    if ((!showcase.screenshots || showcase.screenshots.length === 0) &&
-                        (!showcase.achievements || showcase.achievements.length === 0)) {
-                        document.getElementById('showcaseDescription').style.marginBottom = '0';
-                    } else {
-                        document.getElementById('showcaseDescription').style.marginBottom = '3rem';
-                    }
+                    showcase.achievements.forEach(ach => {
+                        achievementsContainer.innerHTML += `
+                            <div class="achievement-card">
+                                <img src="${ach.iconUrl}" class="achievement-icon" alt="">
+                                <div class="achievement-text">
+                                    <span class="achievement-title">${ach.title}</span>
+                                    <span class="achievement-description">${ach.description}</span>
+                                </div>
+                            </div>`;
+                    });
                 }
 
                 // Featured Projects
                 const featured = data.sections.featured;
-                const featuredSection = document.getElementById('featured-projects');
-                if (featured && featured.projects && featured.projects.length > 0) {
-                    featuredSection.style.display = 'block';
-                    document.getElementById('featured-title').textContent = featured.title || '';
-                    document.getElementById('featured-nda').textContent = featured.ndaNote || '';
-                    const featuredList = document.getElementById('featured-list');
-                    featuredList.innerHTML = ''; // Clear existing
-                    featured.projects.forEach(p => {
-                        const titleHTML = p.url ? `<a href="${p.url}" target="_blank">${p.title}</a>` : p.title;
-                        let mediaHTML = '';
-                        if (p.youtubeEmbedUrl) {
-                            mediaHTML = `<iframe src="${p.youtubeEmbedUrl}" title="${p.title} Video" allowfullscreen></iframe>`;
-                        } else if (p.image) {
-                            mediaHTML = `<img src="${p.image}" alt="${p.title} Screenshot" class="enlargeable">`;
-                        }
-                        featuredList.innerHTML += `
-                            <div class="featured-card">
-                                <div class="featured-card-media">${mediaHTML}</div>
-                                <div class="featured-card-content">
-                                    <h3>${titleHTML}</h3>
-                                    <p>${p.description}</p>
-                                </div>
-                            </div>`;
-                    });
-                } else {
-                    featuredSection.style.display = 'none';
-                }
+                document.getElementById('featured-title').textContent = featured.title;
+                document.getElementById('featured-nda').textContent = featured.ndaNote;
+                const featuredList = document.getElementById('featured-list');
+                featuredList.innerHTML = ''; // Clear existing
+                featured.projects.forEach(p => {
+                    const titleHTML = p.url ? `<a href="${p.url}" target="_blank">${p.title}</a>` : p.title;
+                    let mediaHTML = '';
+                    if (p.youtubeEmbedUrl) {
+                        mediaHTML = `<iframe src="${p.youtubeEmbedUrl}" title="${p.title} Video" allowfullscreen></iframe>`;
+                    } else if (p.image) {
+                        mediaHTML = `<img src="${p.image}" alt="${p.title} Screenshot" class="enlargeable">`;
+                    }
+                    featuredList.innerHTML += `
+                        <div class="featured-card">
+                            <div class="featured-card-media">${mediaHTML}</div>
+                            <div class="featured-card-content">
+                                <h3>${titleHTML}</h3>
+                                <p>${p.description}</p>
+                            </div>
+                        </div>`;
+                });
 
                 // Hypercasual Games
                 const hypercasual = data.sections.hypercasual;
-                const hypercasualSection = document.getElementById('hypercasual-games');
-                if (hypercasual && hypercasual.projects && hypercasual.projects.length > 0) {
-                    hypercasualSection.style.display = 'block';
-                    document.getElementById('hypercasual-title').textContent = hypercasual.title || '';
-                    document.getElementById('hypercasual-description').textContent = hypercasual.description || '';
-                    const hypercasualGrid = document.getElementById('hypercasual-grid');
-                    hypercasualGrid.innerHTML = ''; // Clear existing
-                    hypercasual.projects.forEach(p => {
-                        let mediaHTML = '';
-                        if (p.youtubeEmbedUrl) {
-                            mediaHTML = `<iframe src="${p.youtubeEmbedUrl}" title="${p.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
-                        } else if (p.image) {
-                            mediaHTML = `<img src="${p.image}" alt="${p.title}" class="enlargeable">`;
-                        }
-                        const cardContent = `
-                            ${mediaHTML}
-                            <h4>${p.title}</h4>
-                        `;
-                        if (p.url) {
-                            hypercasualGrid.innerHTML += `<a href="${p.url}" target="_blank" class="hypercasual-card is-clickable">${cardContent}</a>`;
-                        } else {
-                            hypercasualGrid.innerHTML += `<div class="hypercasual-card">${cardContent}</div>`;
-                        }
-                    });
-                } else {
-                    hypercasualSection.style.display = 'none';
-                }
+                document.getElementById('hypercasual-title').textContent = hypercasual.title;
+                document.getElementById('hypercasual-description').textContent = hypercasual.description; // Populate new description
+                const hypercasualGrid = document.getElementById('hypercasual-grid');
+                hypercasualGrid.innerHTML = ''; // Clear existing
+                hypercasual.projects.forEach(p => {
+                    let mediaHTML = '';
+                    if (p.youtubeEmbedUrl) {
+                        mediaHTML = `<iframe src="${p.youtubeEmbedUrl}" title="${p.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+                    } else if (p.image) {
+                        mediaHTML = `<img src="${p.image}" alt="${p.title}" class="enlargeable">`;
+                    }
+                    const cardContent = `
+                        ${mediaHTML}
+                        <h4>${p.title}</h4>
+                    `;
+                    if (p.url) {
+                        hypercasualGrid.innerHTML += `<a href="${p.url}" target="_blank" class="hypercasual-card is-clickable">${cardContent}</a>`;
+                    } else {
+                        hypercasualGrid.innerHTML += `<div class="hypercasual-card">${cardContent}</div>`;
+                    }
+                });
 
                 // Game Jams
                 const gameJams = data.sections.gameJams;
-                const gameJamsSection = document.getElementById('game-jams');
-                if (gameJams && gameJams.projects && gameJams.projects.length > 0) {
-                    gameJamsSection.style.display = 'block';
-                    document.getElementById('gamejams-title').textContent = gameJams.title || '';
-                    const gameJamsList = document.getElementById('gamejams-list');
-                    gameJamsList.innerHTML = ''; // Clear existing
-                    gameJams.projects.forEach(p => {
-                        const linksHTML = p.links.map(link => `<a href="${link.url}" target="_blank" title="${link.title}"><img src="${link.icon}" class="href-icon" alt="${link.title}"/></a>`).join('');
-                        const platformsHTML = p.platforms.map(platform => `<img src="${platform.icon}" class="icon" title="${platform.title}" alt="${platform.title}"/>`).join('');
-                        const titleHTML = p.url ? `<a href="${p.url}" target="_blank">${p.title}</a>` : p.title;
-                        gameJamsList.innerHTML += `<div class="gamejam-item"><div class="gamejam-info"><div class="row-container"><h3>${titleHTML}</h3><div class="links">${linksHTML}</div></div><p>${p.description}</p><div class="platforms">${platformsHTML}</div></div><div class="gamejam-visual"><img src="${p.image}" alt="${p.title} Screenshot" class="enlargeable"></div></div>`;
-                    });
-                } else {
-                    gameJamsSection.style.display = 'none';
-                }
+                document.getElementById('gamejams-title').textContent = gameJams.title;
+                const gameJamsList = document.getElementById('gamejams-list');
+                gameJamsList.innerHTML = ''; // Clear existing
+                gameJams.projects.forEach(p => {
+                    const linksHTML = p.links.map(link => `<a href="${link.url}" target="_blank" title="${link.title}"><img src="${link.icon}" class="href-icon" alt="${link.title}"/></a>`).join('');
+                    const platformsHTML = p.platforms.map(platform => `<img src="${platform.icon}" class="icon" title="${platform.title}" alt="${platform.title}"/>`).join('');
+                    const titleHTML = p.url ? `<a href="${p.url}" target="_blank">${p.title}</a>` : p.title;
+                    gameJamsList.innerHTML += `<div class="gamejam-item"><div class="gamejam-info"><div class="row-container"><h3>${titleHTML}</h3><div class="links">${linksHTML}</div></div><p>${p.description}</p><div class="platforms">${platformsHTML}</div></div><div class="gamejam-visual"><img src="${p.image}" alt="${p.title} Screenshot" class="enlargeable"></div></div>`;
+                });
 
                 // Videos & Prototypes
                 const videos = data.sections.videos;
-                const videosSection = document.getElementById('videos-prototypes');
-                if (videos && videos.projects && videos.projects.length > 0) {
-                    videosSection.style.display = 'block';
-                    document.getElementById('videos-title').textContent = videos.title || '';
-                    const videosGrid = document.getElementById('videos-grid');
-                    videosGrid.innerHTML = ''; // Clear existing
-                    videos.projects.forEach(p => {
-                        videosGrid.innerHTML += `<div class="video-card"><h3>${p.title}</h3><iframe src="${p.youtubeEmbedUrl}" title="YouTube video player" allowfullscreen></iframe><p>${p.description}</p></div>`;
-                    });
-                } else {
-                    videosSection.style.display = 'none';
-                }
+                document.getElementById('videos-title').textContent = videos.title;
+                const videosGrid = document.getElementById('videos-grid');
+                videosGrid.innerHTML = ''; // Clear existing
+                videos.projects.forEach(p => {
+                    videosGrid.innerHTML += `<div class="video-card"><h3>${p.title}</h3><iframe src="${p.youtubeEmbedUrl}" title="YouTube video player" allowfullscreen></iframe><p>${p.description}</p</div>`;
+                });
             }
         });
     </script>

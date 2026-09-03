@@ -12,29 +12,66 @@
   },
   "sections": {
     "showcaseProject": {
-      "title": "Portfolio in Private Mode",
-      "description": "All project details, screenshots, and video demonstrations are currently set to private. Please reach out directly via the contact links above for work samples or inquiries.",
+      "title": "3D Life Simulation Game",
+      "description": "Worked as a key developer on this major 3D life simulation title. I was responsible for architecting core game systems, optimizing performance, and implementing various gameplay features to ensure a high-quality user experience and product growth.",
       "storeLinks": [],
-      "screenshots": [],
-      "achievements": []
+      "screenshots": [
+        "images/showcase/sims_1.png",
+        "images/showcase/sims_2.png",
+        "images/showcase/sims_3.png"
+      ],
+      "achievements": [
+        { "iconUrl": "images/icons/downloads.svg", "title": "Millions", "description": "Downloads across all platforms" },
+        { "iconUrl": "images/icons/star.svg", "title": "4.7 / 5", "description": "High user rating on major platforms" },
+        { "iconUrl": "images/icons/ios.svg", "title": "4.8 / 5", "description": "Exceptional App Store performance" },
+        { "iconUrl": "images/icons/trophy.svg", "title": "Top Tier", "description": "Consistently ranked in its category" }
+      ]
     },
     "featured": {
       "title": "Featured Projects",
-      "ndaNote": "",
-      "projects": []
+      "ndaNote": "Note: Some commercial projects are not displayed or have been generalized due to non-disclosure agreements (NDA).",
+      "projects": [
+        { "title": "Guardian Legacy", "youtubeEmbedUrl": "https://www.youtube.com/embed/v0UOc4I03wo?si=SUo6oDBfO0f_fSeN", "description": "A fast-paced 2D roguelike platformer characterized by its incredibly fluid spline-based animations and vibrant visual effects." },
+        { "title": "Fall Survivor", "image": "images/fall_survival.webp", "url": "https://parado10.itch.io/fall-survival", "description": "A survival game with classic mechanics like inventory management and building, but with a complex control system that allows the player to both control their fall and walk. Features unique manual crafting mechanics." },
+        { "title": "ASCII Shader", "image": "images/asciiShader.webp", "url": "https://github.com/5weetdev/Ascii-shader", "description": "Inspired by Acerola's video on ASCII art rendering, this shader project recreates a unique visual style using ASCII characters. It translates the game's visuals into a nostalgic and technically interesting aesthetic." }
+      ]
     },
     "hypercasual": {
       "title": "Hypercasual Games",
-      "description": "",
-      "projects": []
+      "description": "A selection of hypercasual games developed for various clients and publishers. This work involved rapid prototyping, designing engaging core loops, and preparing projects for market testing and publishing.",
+      "projects": [
+        { "title": "Color Block Sort!", "youtubeEmbedUrl": "https://www.youtube.com/embed/3k7EMXbZmhk" },
+        { "title": "Fridge Frenzy!", "youtubeEmbedUrl": "https://www.youtube.com/embed/_kYKeMq4WfU" },
+        { "title": "Gift Jam!", "youtubeEmbedUrl": "https://www.youtube.com/embed/g3TN4XW7a7g" },
+        { "title": "Jigsort!", "youtubeEmbedUrl": "https://www.youtube.com/embed/hFuZzdKRGU0" },
+        { "title": "Juicy Drop!", "youtubeEmbedUrl": "https://www.youtube.com/embed/6A5518LlQgU" },
+        { "title": "Luggage Jam!", "youtubeEmbedUrl": "https://www.youtube.com/embed/eL6bf3cU7qY" },
+        { "title": "Market Maze!", "youtubeEmbedUrl": "https://www.youtube.com/embed/KHikE-w0nRk" },
+        { "title": "Money Merge Jam!", "youtubeEmbedUrl": "https://www.youtube.com/embed/ajFDGYmToBY" },
+        { "title": "Block Mania!", "youtubeEmbedUrl": "https://www.youtube.com/embed/OvD_67odAxg" },
+        { "title": "Van Jam!", "youtubeEmbedUrl": "https://www.youtube.com/embed/3QT_9sjqIAI" }
+      ]
     },
     "gameJams": {
       "title": "Game Jams",
-      "projects": []
+      "projects": [
+        { "title": "RoboBobo", "image": "images/RoboBobo.webp", "url": "https://alefe4.itch.io/robobobo", "description": "Created in 4 days for GMTK 2024. A 2D platformer where players resize their character and objects to solve puzzles. Features FMOD integration and a post-jam multiplayer demo.", "links": [ { "url": "https://alefe4.itch.io/robobobo", "icon": "images/icons/itch-io.svg", "title": "itch.io page" } ], "platforms": [ { "icon": "images/icons/web.svg", "title": "Web" }, { "icon": "images/icons/pc.svg", "title": "PC" }, { "icon": "images/icons/lan.svg", "title": "Multiplayer" } ] },
+        { "title": "Souls Binary Abyss", "image": "images/binary_abys.webp", "url": "https://parado10.itch.io/sbinaryabyss", "description": "Made in 6 days for Brackeys Jam #10. Features 2 enemy types and 3 playable characters, all made from scratch with a 3D modeller.", "links": [ { "url": "https://parado10.itch.io/sbinaryabyss", "icon": "images/icons/itch-io.svg", "title": "itch.io page" } ], "platforms": [ { "icon": "images/icons/web.svg", "title": "Web" }, { "icon": "images/icons/pc.svg", "title": "PC" } ] },
+        { "title": "Jija Escape", "image": "images/Jija_escape.webp", "url": "https://parado10.itch.io/jija-escape", "description": "Made in 1 week. Play as an office fish building your way up with spawning objects. Features a building system with snapping and p2p multiplayer via Mirror.", "links": [ { "url": "https://parado10.itch.io/jija-escape", "icon": "images/icons/itch-io.svg", "title": "itch.io page" } ], "platforms": [ { "icon": "images/icons/web.svg", "title": "Web" }, { "icon": "images/icons/pc.svg", "title": "PC" }, { "icon": "images/icons/lan.svg", "title": "Multiplayer" } ] },
+        { "title": "🌸 DAFFY 🌸", "image": "images/daffy.webp", "url": "https://5weetdev.itch.io/daffy", "description": "A simple game inspired by Doom and Animal Crossing. Water flowers and shoot demons. Made in 48 hours with a 2D artist.", "links": [ { "url": "https://5weetdev.itch.io/daffy", "icon": "images/icons/itch-io.svg", "title": "itch.io page" } ], "platforms": [ { "icon": "images/icons/web.svg", "title": "Web" }, { "icon": "images/icons/pc.svg", "title": "PC" } ] }
+      ]
     },
     "videos": {
       "title": "Videos & Prototypes",
-      "projects": []
+      "projects": [
+        { "title": "Wave function collapse", "youtubeEmbedUrl": "https://www.youtube.com/embed/LWiweMjR5iQ?si=3VKqghuX2I7EPXrn", "description": "My implementation of the popular algorithm for generating simple landscapes from a given tilemap." },
+        { "title": "Post office game prototype", "youtubeEmbedUrl": "https://www.youtube.com/embed/BYnIivyabC8?si=IQYBQaFVD-YFLzT5", "description": "Developed a prototype of a post office simulator in one week with a 3D artist." },
+        { "title": "Zombie Friend Game [WIP]", "youtubeEmbedUrl": "https://www.youtube.com/embed/m5vikFvVu1Q?si=RamIxurHC5SgbzB0", "description": "Multiplayer game in development." },
+        { "title": "RoboBobo Multiplayer", "youtubeEmbedUrl": "https://www.youtube.com/embed/LFEx8xezikE?si=GTpujwUV4NfVDziy", "description": "A multiplayer version of the GMTK 2024 game, using Netcode for GameObjects and Unity Relay services." },
+        { "title": "Meals and monsters", "youtubeEmbedUrl": "https://www.youtube.com/embed/-3Gq0btQik4?si=Q4CijBHX0ABbb0mN", "description": "Yet another gamejam project with gesture recongnition." },
+        { "title": "Souls Binary Abyss", "youtubeEmbedUrl": "https://www.youtube.com/embed/5Nt-Hn-MjXQ?si=unGY4xg7Tj4D4zC6", "description": "Based on the divine comedy." },
+        { "title": "Jija Escape", "youtubeEmbedUrl": "https://www.youtube.com/embed/aGbRkG3LLM8?si=EIunVwUe2E4pKNyN", "description": "You are an ordinary office fish that came to work. And suddenly on the very first day in the office, something terrible happens, and now you have to save your life by building upwards the Tower of Trash that gets in your way and avoiding the Muddy Slime Monster." }
+      ]
     }
   }
 }
