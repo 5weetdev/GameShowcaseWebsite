@@ -25,19 +25,53 @@ h2 { font-size: 2.5rem; margin-top: 4rem; border-bottom: 2px solid var(--border-
 h3 { font-size: 1.5rem; color: var(--text-color); }
 h4 { font-size: 1.1rem; }
 p { margin-bottom: 1rem; color: var(--text-muted); }
-a { color: var(--primary-color); text-decoration: none; transition: color 0.3s ease; }
-a:hover { color: #fff; }
-img { max-width: 100%; height: auto; display: block; }
-
-/* Style for linked titles */
-h3 a, h4 a {
-    color: inherit;
+a {
+    color: var(--primary-color);
     text-decoration: none;
     transition: color 0.3s ease;
 }
-h3 a:hover, h4 a:hover {
+a:hover { color: #fff; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* Style for linked titles & texts containing references */
+h3 a, h4 a {
     color: var(--primary-color);
     text-decoration: underline;
+    text-decoration-color: rgba(0, 245, 196, 0.45);
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1.5px;
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+h3 a::after, h4 a::after {
+    content: " ↗";
+    display: inline-block;
+    font-size: 0.8em;
+    line-height: 1;
+    opacity: 0.75;
+    margin-left: 0.25rem;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+h3 a:hover, h4 a:hover {
+    color: #fff;
+    text-decoration-color: #fff;
+}
+h3 a:hover::after, h4 a:hover::after {
+    opacity: 1;
+    transform: translate(2px, -2px);
+}
+
+/* Style for general body text links */
+p a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 245, 196, 0.45);
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1.5px;
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+p a:hover {
+    color: #fff;
+    text-decoration-color: #fff;
 }
 
 
@@ -69,8 +103,19 @@ h3 a:hover, h4 a:hover {
     align-items: center;
     gap: 0.75rem;
     color: var(--text-muted);
+    transition: color 0.3s ease;
+}
+.contact-item span {
+    text-decoration: underline;
+    text-decoration-color: rgba(136, 153, 166, 0.4);
+    text-underline-offset: 3px;
+    transition: color 0.3s ease, text-decoration-color 0.3s ease;
 }
 .contact-item:hover { color: var(--primary-color); }
+.contact-item:hover span {
+    color: var(--primary-color);
+    text-decoration-color: var(--primary-color);
+}
 .contact-icon {
     width: 24px;
     height: 24px;
@@ -294,9 +339,28 @@ h3 a:hover, h4 a:hover {
 
 a.hypercasual-card { display: block; text-decoration: none; }
 .hypercasual-card.is-clickable { cursor: pointer; }
+.hypercasual-card.is-clickable h4 {
+    color: var(--primary-color);
+    transition: color 0.2s ease;
+}
+.hypercasual-card.is-clickable h4::after {
+    content: " ↗";
+    display: inline-block;
+    font-size: 0.8em;
+    opacity: 0.75;
+    margin-left: 0.25rem;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
 .hypercasual-card.is-clickable:hover {
     border-color: var(--primary-color);
     box-shadow: 0 0 15px rgba(0, 245, 196, 0.3);
+}
+.hypercasual-card.is-clickable:hover h4 {
+    color: #fff;
+}
+.hypercasual-card.is-clickable:hover h4::after {
+    opacity: 1;
+    transform: translate(2px, -2px);
 }
 .hypercasual-card:not(.is-clickable) img { cursor: pointer; }
 
