@@ -66,7 +66,6 @@
       "projects": [
         { "title": "Wave function collapse", "youtubeEmbedUrl": "https://www.youtube.com/embed/LWiweMjR5iQ?si=3VKqghuX2I7EPXrn", "description": "My implementation of the popular algorithm for generating simple landscapes from a given tilemap." },
         { "title": "Post office game prototype", "youtubeEmbedUrl": "https://www.youtube.com/embed/BYnIivyabC8?si=IQYBQaFVD-YFLzT5", "description": "Developed a prototype of a post office simulator in one week with a 3D artist." },
-        { "title": "Zombie Friend Game [WIP]", "youtubeEmbedUrl": "https://www.youtube.com/embed/m5vikFvVu1Q?si=RamIxurHC5SgbzB0", "description": "Multiplayer game in development." },
         { "title": "RoboBobo Multiplayer", "youtubeEmbedUrl": "https://www.youtube.com/embed/LFEx8xezikE?si=GTpujwUV4NfVDziy", "description": "A multiplayer version of the GMTK 2024 game, using Netcode for GameObjects and Unity Relay services." },
         { "title": "Meals and monsters", "youtubeEmbedUrl": "https://www.youtube.com/embed/-3Gq0btQik4?si=Q4CijBHX0ABbb0mN", "description": "Yet another gamejam project with gesture recongnition." },
         { "title": "Souls Binary Abyss", "youtubeEmbedUrl": "https://www.youtube.com/embed/5Nt-Hn-MjXQ?si=unGY4xg7Tj4D4zC6", "description": "Based on the divine comedy." },
