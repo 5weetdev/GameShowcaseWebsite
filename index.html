@@ -135,7 +135,12 @@
                 // --- Populate Showcase Project ---
                 const showcase = data.sections.showcaseProject;
                 if (showcase) {
-                    document.getElementById('showcaseTitle').textContent = showcase.title;
+                    const showcaseTitle = document.getElementById('showcaseTitle');
+                    if (showcase.url) {
+                        showcaseTitle.innerHTML = `<a href="${showcase.url}" target="_blank">${showcase.title}</a>`;
+                    } else {
+                        showcaseTitle.textContent = showcase.title;
+                    }
                     document.getElementById('showcaseDescription').textContent = showcase.description;
                     const storeLinksContainer = document.getElementById('showcaseStoreLinks');
                     storeLinksContainer.innerHTML = ''; // Clear existing
