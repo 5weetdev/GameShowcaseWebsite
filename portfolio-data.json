@@ -7,6 +7,8 @@
       { "type": "email", "url": "mailto:olexiivolosh@gmail.com", "text": "olexiivolosh@gmail.com" },
       { "type": "linkedin", "url": "https://linkedin.com/in/oleksii-voloshchuk-9591132b7", "text": "Oleksii Voloshchuk" },
       { "type": "github", "url": "https://github.com/5weetdev", "text": "5weetdev (personal)" },
+      { "type": "telegram", "url": "https://t.me/+380507816394", "text": "+380507816394" },
+      { "type": "viber", "url": "viber://chat?number=%2B380507816394", "text": "+380507816394" },
       { "type": "discord", "url": "https://discord.com/", "text": "@__deleted__" }
     ]
   },
